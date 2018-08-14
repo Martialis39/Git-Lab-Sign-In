@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+p {
+  font-size: 16px; }
 
 html,
 body {
@@ -15,29 +18,31 @@ header {
   text-align: center; }
 
 .main {
-  margin: 0 auto;
+  margin: 80px auto 0;
   max-width: 1000px;
-  border: 1px solid red;
   display: flex;
   flex-flow: row nowrap; }
 
 .main h1 {
-  padding-bottom: 20px; }
-
-.main p {
-  padding-bottom: 15px; }
+  font-weight: 400; }
 
 .main ul {
-  padding-left: 15px; }
+  padding-left: 40px; }
 
 .main li {
   padding-bottom: 10px; }
 
 .main--left--column {
-  border: 1px solid green; }
+  padding: 0 10px; }
+
+.main--left--column a {
+  font-weight: 600; }
+
+.main--left--column p {
+  margin: 15px 0; }
 
 .main--right--column {
-  border: 1px solid yellow; }
+  padding-right: 15px; }
 
 footer {
   width: 100%;
@@ -46,7 +51,7 @@ footer {
   bottom: 0; }
 
 .main--footer--list {
-  width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   list-style: none;
   font-size: 14px; }
@@ -58,3 +63,90 @@ footer {
       text-decoration: none;
       color: #4285f4;
       font-size: bold; }
+
+.auth-container {
+  margin: 0 auto 50px;
+  width: 400px;
+  display: flex;
+  flex-flow: column wrap; }
+
+.hide {
+  display: none; }
+
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  background: #e5e5e5; }
+
+.buttons-wrapper a {
+  text-decoration: none;
+  color: #2e2e2e;
+  flex: 1 0 50%;
+  text-align: center; }
+
+.buttons-wrapper a:hover {
+  background: black; }
+
+form input,
+form label {
+  font-size: .9em;
+  display: block;
+  width: 100%; }
+
+form label {
+  margin: 10px 0; }
+
+.password--settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.password--settings input,
+.password--settings a,
+password--settings label {
+  flex: 1 0 auto;
+  width: auto; }
+
+.forgot-password-p {
+  margin: 20px 0;
+  font-size: .9em; }
+
+form button {
+  background-color: #1aaa55;
+  color: white;
+  padding: 10px;
+  border: 0px solid black;
+  transition: background-color .2s;
+  cursor: pointer;
+  width: 100%;
+  font-size: .8em;
+  line-height: 1em; }
+
+form button:hover {
+  background-color: green; }
+
+.social {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  box-shadow: 0 0 0 1px #e5e5ff;
+  padding: 10px; }
+
+.social img + img {
+  margin-left: 15px; }
+
+.social p {
+  margin-right: 15px; }
+
+.social form {
+  display: flex;
+  align-items: center;
+  width: 100%; }
+
+.social form input {
+  width: auto; }
+
+.sign-in-container {
+  box-shadow: 0 0 0 1px #e5e5ff;
+  padding: 15px; }

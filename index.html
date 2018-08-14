@@ -47,20 +47,85 @@
         </div>
         <div class="main--right--column">
 
-            <div class="main--sign--tab">
-                <form action="">
-                    <label for="username"></label>
-                    <input type="text" name="username" id="username">
-                    <label for="password"></label>
-                    <input type="text" name="password" id="password">
-                    <button type="radio"></button>
-                    <a href="#">Forgot your password?</a>
-                    <button>Sign in</button>
-                </form>
-                <p>Didn't receive a confirmation email? Request a new one.</p>
+
+            <div class="auth-container">
+
+                <div class="buttons-wrapper">
+
+                    <a href="#" class="sign-in-button">Sign in</a>
+                    <a href="#" class="sign-up-button">Sign up</a>
+                </div>
+
+                <div class="sign-in-container active">
+                    <form class="sign-in-form" action="#">
+
+                        <label for="username">Username or email</label>
+                        <input type="text" id="username">
+
+
+                        <label for="password">Password</label>
+                        <input type="text" id="password">
+
+                        <div class="password--settings">
+                            <input type="checkbox" id="confirm">
+                            <label for="confirm">Remember me</label>
+                            <a href="#">Forgot your password?</a>
+
+                        </div>
+
+                        <button>Sign in</button>
+                    </form>
+
+                </div>
+
+                <p class="forgot-password-p">Didn't receive a confirmation email?
+
+                    <a href="#">Request a new one.</a>
+                </p>
+
+                <div class="social">
+                    <p>Sign in with </p>
+                    <img src="https://assets.gitlab-static.net/assets/auth_buttons/bitbucket_64-eceb0f98bfa1a0bdc088138f970e1bc209114a8934c1372b596e9d137e611c21.png"
+                        alt="#" height="32">
+                    <img src="https://assets.gitlab-static.net/assets/auth_buttons/bitbucket_64-eceb0f98bfa1a0bdc088138f970e1bc209114a8934c1372b596e9d137e611c21.png"
+                        alt="#" height="32">
+                    <img src="https://assets.gitlab-static.net/assets/auth_buttons/bitbucket_64-eceb0f98bfa1a0bdc088138f970e1bc209114a8934c1372b596e9d137e611c21.png"
+                        alt="#" height="32">
+                    <img src="https://assets.gitlab-static.net/assets/auth_buttons/bitbucket_64-eceb0f98bfa1a0bdc088138f970e1bc209114a8934c1372b596e9d137e611c21.png"
+                        alt="#" height="32">
+                    <form action="#">
+                        <input type="checkbox" id="social--confirm">
+                        <label for="social--confirm">Remember me</label>
+                    </form>
+
+                </div>
+
+                <div class="sign-up-container hide">
+
+                    <form class="sign-up-form" action="#">
+
+                        <div>
+                            <label for="username">Full name</label>
+                            <input type="text" id="username">
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="text" id="password">
+                        </div>
+                        <div class="password--settings">
+                            <input type="checkbox" id="confirm">
+                            <label for="confirm">Remember me</label>
+                            <a href="#">Forgot your password?</a>
+
+                        </div>
+
+                        <button>Submit!</button>
+                    </form>
+                </div>
+
             </div>
 
-            <div class="main--register--tab"></div>
+
 
         </div>
     </div>
