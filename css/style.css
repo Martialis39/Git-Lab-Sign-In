@@ -76,17 +76,26 @@ footer {
 .buttons-wrapper {
   display: flex;
   align-items: center;
-  font-size: 1.5em;
-  background: #e5e5e5; }
+  justify-content: center;
+  background: #e5e5e5;
+  height: 60px; }
 
-.buttons-wrapper a {
+.buttons-wrapper div {
+  height: 100%;
+  width: 50%;
+  transition: background .3s; }
+
+.buttons-wrapper div p {
+  font-size: 1.5em;
+  line-height: 2em;
   text-decoration: none;
   color: #2e2e2e;
-  flex: 1 0 50%;
-  text-align: center; }
+  text-align: center;
+  height: 100%; }
 
-.buttons-wrapper a:hover {
-  background: black; }
+.buttons-wrapper div:hover {
+  background: white;
+  border-bottom: 2px solid #1a4caa; }
 
 form input,
 form label {
@@ -147,6 +156,28 @@ form button:hover {
 .social form input {
   width: auto; }
 
-.sign-in-container {
+.sign-in-container,
+.sign-up-container {
   box-shadow: 0 0 0 1px #e5e5ff;
   padding: 15px; }
+
+.captcha {
+  margin: 15px 0; }
+
+.sign-up-button {
+  background-color: #1a4caa;
+  color: white;
+  padding: 10px;
+  border: 0px solid black;
+  transition: background-color .2s;
+  cursor: pointer;
+  width: 100%;
+  font-size: .8em;
+  line-height: 1em; }
+
+.sign-up-container .sign-in-form .settings {
+  display: flex; }
+  .sign-up-container .sign-in-form .settings input {
+    width: auto; }
+  .sign-up-container .sign-in-form .settings label {
+    width: auto; }
