@@ -70,9 +70,6 @@ footer {
   display: flex;
   flex-flow: column wrap; }
 
-.hide {
-  display: none; }
-
 .buttons-wrapper {
   display: flex;
   align-items: center;
@@ -83,7 +80,8 @@ footer {
 .buttons-wrapper div {
   height: 100%;
   width: 50%;
-  transition: background .3s; }
+  transition: background .3s;
+  cursor: pointer; }
 
 .buttons-wrapper div p {
   font-size: 1.5em;
@@ -176,8 +174,21 @@ form button:hover {
   line-height: 1em; }
 
 .sign-up-container .sign-in-form .settings {
-  display: flex; }
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; }
   .sign-up-container .sign-in-form .settings input {
-    width: auto; }
+    width: auto;
+    flex: 1 0 auto; }
   .sign-up-container .sign-in-form .settings label {
-    width: auto; }
+    width: auto;
+    flex: 1 0 auto; }
+  .sign-up-container .sign-in-form .settings .captcha {
+    flex: 1 0 100%; }
+
+.hide {
+  display: none; }
+
+.active {
+  background-color: white;
+  border-bottom: 2px solid blue; }
