@@ -26,6 +26,9 @@ header {
     max-width: 1000px;
     display: flex;
     flex-flow: row nowrap;
+    @media screen and (max-width: 640px) {
+        flex-flow: row wrap;
+    }
 }
 
 .main h1 {
@@ -54,6 +57,9 @@ header {
 
 .main--right--column {
     padding-right: 15px;
+    @media screen and (max-width: 640px) {
+        margin: 10px auto;
+    }
 }
 
 footer {
@@ -61,6 +67,10 @@ footer {
     border-top: 1px solid #f0f0f0;
     position: absolute;
     bottom: 0;
+    @media screen and (max-width: 640px) {
+        position: relative;
+        padding-left: 1em;
+    }
 }
 
 .main--footer--list {
@@ -84,11 +94,10 @@ footer {
 // 
 .auth-container {
     margin: 0 auto 50px;
-    width: 350px;
+    max-width: 350px;
     display: flex;
     flex-flow: column wrap;
 }
-
 
 .buttons-wrapper {
     display: flex;
@@ -112,11 +121,15 @@ footer {
     color: rgb(46, 46, 46);
     text-align: center;
     height: 100%;
+    box-shadow: 0 0 0 1px rgb(229, 229, 299);
+}
+
+.button-is-active {
+    background: white;
 }
 
 .buttons-wrapper div:hover {
     background: white;
-    border-bottom: 2px solid rgb(26, 76, 170);
 }
 
 form input,
@@ -138,7 +151,7 @@ form label {
 
 .password--settings input,
 .password--settings a,
-password--settings label {
+.password--settings label {
     flex: 1 0 auto;
     width: auto;
 }
@@ -166,6 +179,7 @@ form button:hover {
 
 .social {
     display: flex;
+    width: 350px;
     align-items: center;
     flex-flow: row wrap;
     box-shadow: 0 0 0 1px rgb(229, 229, 299);
@@ -212,32 +226,7 @@ form button:hover {
     line-height: 1em;
 }
 
-.sign-up-container .sign-in-form {
-    .settings {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-
-        input {
-            width: auto;
-            flex: 1 0 auto;
-        }
-        label {
-            width: auto;
-            flex: 1 0 auto;
-        }
-
-        
-
-        .captcha {
-            flex: 1 0 100%;
-        }
-    }
-}
-
-
 // utility classes
-
 .hide {
     display: none;
 }
@@ -245,4 +234,17 @@ form button:hover {
 .active {
     background-color: white;
     border-bottom: 2px solid blue;
+}
+
+.sign-up-container .settings form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    label {
+        flex: 1 0 95%;
+        padding-left: 5px;
+    }
+    input {
+        flex: 0 1 5%;
+    }
 }

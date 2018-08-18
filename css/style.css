@@ -22,6 +22,9 @@ header {
   max-width: 1000px;
   display: flex;
   flex-flow: row nowrap; }
+  @media screen and (max-width: 640px) {
+    .main {
+      flex-flow: row wrap; } }
 
 .main h1 {
   font-weight: 400; }
@@ -43,12 +46,19 @@ header {
 
 .main--right--column {
   padding-right: 15px; }
+  @media screen and (max-width: 640px) {
+    .main--right--column {
+      margin: 10px auto; } }
 
 footer {
   width: 100%;
   border-top: 1px solid #f0f0f0;
   position: absolute;
   bottom: 0; }
+  @media screen and (max-width: 640px) {
+    footer {
+      position: relative;
+      padding-left: 1em; } }
 
 .main--footer--list {
   max-width: 1000px;
@@ -66,7 +76,7 @@ footer {
 
 .auth-container {
   margin: 0 auto 50px;
-  width: 350px;
+  max-width: 350px;
   display: flex;
   flex-flow: column wrap; }
 
@@ -89,11 +99,14 @@ footer {
   text-decoration: none;
   color: #2e2e2e;
   text-align: center;
-  height: 100%; }
+  height: 100%;
+  box-shadow: 0 0 0 1px #e5e5ff; }
+
+.button-is-active {
+  background: white; }
 
 .buttons-wrapper div:hover {
-  background: white;
-  border-bottom: 2px solid #1a4caa; }
+  background: white; }
 
 form input,
 form label {
@@ -111,7 +124,7 @@ form label {
 
 .password--settings input,
 .password--settings a,
-password--settings label {
+.password--settings label {
   flex: 1 0 auto;
   width: auto; }
 
@@ -135,6 +148,7 @@ form button:hover {
 
 .social {
   display: flex;
+  width: 350px;
   align-items: center;
   flex-flow: row wrap;
   box-shadow: 0 0 0 1px #e5e5ff;
@@ -173,22 +187,19 @@ form button:hover {
   font-size: .8em;
   line-height: 1em; }
 
-.sign-up-container .sign-in-form .settings {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center; }
-  .sign-up-container .sign-in-form .settings input {
-    width: auto;
-    flex: 1 0 auto; }
-  .sign-up-container .sign-in-form .settings label {
-    width: auto;
-    flex: 1 0 auto; }
-  .sign-up-container .sign-in-form .settings .captcha {
-    flex: 1 0 100%; }
-
 .hide {
   display: none; }
 
 .active {
   background-color: white;
   border-bottom: 2px solid blue; }
+
+.sign-up-container .settings form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; }
+  .sign-up-container .settings form label {
+    flex: 1 0 95%;
+    padding-left: 5px; }
+  .sign-up-container .settings form input {
+    flex: 0 1 5%; }
